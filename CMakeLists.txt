@@ -14,7 +14,7 @@ endif()
 set(CMAKE_C_FLAGS_RELEASE "-O3")
 
 
-execute_process(COMMAND shader_minifier.exe --aggressive-inlining  -o shaders.h --format c-variables --no-renaming vert.glsl frag.glsl)
+execute_process(COMMAND shader_minifier.exe --aggressive-inlining  -o shaders.h --format c-variables --no-renaming vert.glsl frag.glsl compute.glsl)
 
 # Include glfw directory, to define the 'glfw' target
 add_subdirectory(glfw)
